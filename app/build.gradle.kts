@@ -10,11 +10,11 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "dev.wintry.xposed"
+        applicationId = "dev.lumi.xposed"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1000
-        versionName = "1.0.0"
+        versionCode = 0010
+        versionName = "0.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

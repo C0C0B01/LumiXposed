@@ -23,6 +23,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WintryXposed"
+rootProject.name = "LumiXposed"
 include(":app")
  

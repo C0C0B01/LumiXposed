@@ -21,7 +21,7 @@ class XposedEntry: IXposedHookLoadPackage {
                 val context = param.args[0] as Context
 
                 YukiHookAPI.configs {
-                    tag = "WintryXposed"
+                    tag = "LumiXposed"
                 }
 
                 YukiHookAPI.encase(context) {

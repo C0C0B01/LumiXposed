@@ -51,7 +51,7 @@ class HookEntry {
             put("revision", runCatching { File(BUNDLE_FILE.parentFile, "${BUNDLE_FILE.name}.revision").readText() }.getOrElse { null })
         }
         putJsonObject("loader") {
-            put("name", "WintryXposed")
+            put("name", "LumiXposed")
             put("version", BuildConfig.VERSION_NAME)
             put("initConfig", Json { encodeDefaults = true }.encodeToJsonElement(InitConfig.Current))
             putJsonObject("constants") {
