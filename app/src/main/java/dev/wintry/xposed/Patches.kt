@@ -73,7 +73,7 @@ object Patches {
                     val message = buildString {
                         append("Failed to fetch bundle, ")
                         if (bundle.exists()) append("using cached version")
-                        else append("Wintry may not load")
+                        else append("Lumi may not load")
                         append(": ${ex.message}")
                     }
 
