@@ -15,6 +15,8 @@ import kotlinx.serialization.json.encodeToJsonElement
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonObject
 import java.io.File
+import android.content.res.Resources
+import com.highcapable.yukihookapi.hook.factory.method
 
 class HookEntry {
     companion object {
@@ -36,6 +38,19 @@ class HookEntry {
         val catalystInstanceImplClass = "com.facebook.react.bridge.CatalystInstanceImpl".toClassOrNull() ?: return
 
         packageParam = this
+
+        // Fighting the side effects of changing the package name
+        if (packageName != "com.discord") {
+            Resources::class.java.method {
+                name = "getIdentifier"
+                param(String::class.java, String::class.java, String::class.java)
+            }.hook {
+                before {
+                    if (args[2] == packageName) args[2] = "com.discord"
+                }
+            }
+        }
+
 
         // Get the activity
         RuntimeHelper.setupHook(this)

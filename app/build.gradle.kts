@@ -13,8 +13,8 @@ android {
         applicationId = "dev.lumi.xposed"
         minSdk = 26
         targetSdk = 35
-        versionCode = 2
-        versionName = "0.0.2"
+        versionCode = 3x
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
